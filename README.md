@@ -41,5 +41,3 @@ To use the URL shortener API, make HTTP requests to the following endpoints:
 - **POST /api/shorten:** Shorten a long URL.
 - **GET /{urlId}:** Redirect to the original URL.
  environment file.
-
-You can access the Swagger documentation by replacing `BASE_URL` with the actual base URL of your API.
