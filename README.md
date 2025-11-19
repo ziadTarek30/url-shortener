@@ -7,13 +7,13 @@ A simple Node.js URL shortener using ExpressJS and MongoDB.
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/mohamadayash22/node-url-shortener.git
+   git clone https://github.com/ziadTarek30/url-shortener.git
    ```
 
 2. Install the project dependencies
 
    ```sh
-    cd node-url-shortener
+    cd url-shortener
     npm install
    ```
 
@@ -21,8 +21,7 @@ A simple Node.js URL shortener using ExpressJS and MongoDB.
 
    ```sh
     PORT=3000
-    MONGODB_URI=your-mongodb-uri
-    BASE_URL=your-api-base-url
+    MONGODB_URI=your-mongodb-url
    ```
 
 4. To run the app in dev mode
