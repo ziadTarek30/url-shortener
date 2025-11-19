@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortener</title>
+</head>
+<body style="display: grid; place-items: center; height: 50vh;">
+    <form action="" method="get">
+        <input required type="url" name="url" id="url">
+        <button type="submit">Get Short Url</button>
+    </form>
+    <br><br>
+    <% if (!correctUrl) { %>
+        <p style="color: darkred;">Invalid Url</p>
+    <% } %>
+    <table border="1" style="width: 500px; height: 300px">
+        <thead>
+            <th>Long URL</th>
+            <th>Short URL</th>
+            <th>Number Of Visits Using Short URL</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+        <% urls.forEach(url => { %>
+            <tr>
+            <td><%= url.longUrl %></td>
+            <td> <a href="/<%= url.shortUrl %>"><%= url.shortUrl %></a></td>
+            <td style="text-align: center;"><%= url.count %></td>
+            <td>
+                <form action="/<%= url.shortUrl %>" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+        <% }) %>
+    </table>
+</body>
+</html>
